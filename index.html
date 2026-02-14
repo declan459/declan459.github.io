@@ -78,11 +78,34 @@
 
     <footer>
         <a href="http://youtube.com/@declantech">YouTube</a>
-         
+<body>
+  <div id="animation">
+    <img id="pacManImg" src="pacMan1.png" width="50" height="50" />
+    <img id="pacManImg" src="pacMan2.jpg" width="50" height="50" />
+
+	  <script>// Source - https://stackoverflow.com/q/54897898
+// Posted by H. Martin, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-02-15, License - CC BY-SA 4.0
+
+function startAnimation() { 
+  var frames = document.getElementById("animation").children;
+  var frameCount = frames.length;
+  var i = 0;
+  setInterval(function () { 
+    frames[i % frameCount].style.display = "none";
+    frames[++i % frameCount].style.display = "block";
+}, 300);
+}
+</script>
+</div>
+<button onclick="startAnimation()"> Start</button>
+</body>
+
     </footer>
 </body>
 
 </html>
+
 
 
 
