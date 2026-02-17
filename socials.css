@@ -297,3 +297,17 @@ projects {
     font-weight: 600;
 
 }
+
+.github-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+
+}
+
+
