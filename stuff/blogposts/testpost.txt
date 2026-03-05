@@ -14,14 +14,16 @@
 
                                          -- POST DATA --
 
-                                         Posted By: NAME
+                                         Posted By: Declan
 
-                                           Post Name:
+                           Post Name: Minecraft Legacy Console Source Code Leaked 
 
-                                       Post Creation Date:
+                                  Post Creation Date: 2/5/2026 NZ Time
 
-                                           Post Tags: 
+                                   Post Tags: minecraft, gaming, blog
 
 Post: 
 
-Lorem Ipsum
+The code for legacy edition console has just been leaked online and people have noticed it was coded in cpp so it was compiled to run on computers as shown below
+
+https://www.youtube.com/watch?v=MYl09O8AmiY (the video, if you are viewing the text file version go to the youtube link)
