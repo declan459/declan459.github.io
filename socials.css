@@ -310,4 +310,17 @@ projects {
 
 }
 
+.twitch-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: purple;
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+
+}
+
+
 
