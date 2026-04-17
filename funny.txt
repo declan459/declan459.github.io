@@ -1,9 +1,9 @@
 # === CONFIG ===
 $imageUrl = "https://images.theconversation.com/files/465400/original/file-20220525-12-5rdcq0.jpg?ixlib=rb-4.1.0&rect=6%2C15%2C2111%2C1393&q=45&auto=format&w=754&fit=clip"
-$imagePath = "C:\wallpaper.jpg"
+$imagePath = "$env:USERPROFILE\Pictures\wallpaper.jpg"
 
 $audioUrl = "https://declan459.github.io/Download(1).mp3"
-$audioPath = "C:\song.mp3"
+$audioPath = "$env:USERPROFILE\Music\song.mp3"
 
 # === DOWNLOAD FILES ===
 Invoke-WebRequest -Uri $imageUrl -OutFile $imagePath
@@ -20,24 +20,23 @@ public class Wallpaper {
 
 [Wallpaper]::SystemParametersInfo(20, 0, $imagePath, 3)
 
-# === PLAY AUDIO IN LOOP ===
+# === PLAY AUDIO LOOP ===
 Add-Type -AssemblyName presentationCore
-
 $player = New-Object System.Windows.Media.MediaPlayer
 $player.Open([Uri]$audioPath)
-
-# Loop playback
-$player.MediaEnded += {
-    $player.Position = [TimeSpan]::Zero
-    $player.Play()
-}
-
 $player.Volume = 0.5
-$player.Play()
 
-Write-Host "Wallpaper set and music playing..."
-
-# Keep script alive so music continues
 while ($true) {
-    Start-Sleep -Seconds 5
+    $player.Play()
+    Start-Sleep -Seconds 1
+
+    # Wait until playback finishes
+    while ($player.NaturalDuration.HasTimeSpan -and
+           $player.Position -lt $player.NaturalDuration.TimeSpan) {
+        Start-Sleep -Milliseconds 500
+    }
+
+    # Restart
+    $player.Stop()
+    $player.Position = [TimeSpan]::Zero
 }
