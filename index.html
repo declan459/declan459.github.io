@@ -10,10 +10,16 @@
 </head>
 <body>
 	<!-- no im not ai, this is just to tell me where to delete !-->
+	<script>
+		document.querySelector(".banner__close").addEventListener("click", function () {
+  this.closest(".banner").style.display = "none";
+});
+	</script>
+	
 	<div class="banner">
     <div class="banner__content">
       <div class="banner__text">
-        <strong>Reminder:</strong> your subscription expires in 22 days. Renew to avoid account suspension.
+        <strong>NOTE:</strong> this website may be getting a massive redesign, do note a lot of blog posts may stay the same or not change
       </div>
       <button class="banner__close" type="button">
         <span class="material-icons">
