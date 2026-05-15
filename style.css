@@ -245,7 +245,6 @@ footer a:hover {
   flex-grow: 1;
   line-height: 1.4;
   font-family: "Quicksand", sans-serif;
-  color: black;
 }
 
 .banner__close {
@@ -256,6 +255,6 @@ footer a:hover {
 
 .banner__text,
 .banner__close > span {
-  color: #ffffff;
+  color: black;
 }
 
