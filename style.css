@@ -245,6 +245,7 @@ footer a:hover {
   flex-grow: 1;
   line-height: 1.4;
   font-family: "Quicksand", sans-serif;
+  color: black;
 }
 
 .banner__close {
