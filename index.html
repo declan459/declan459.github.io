@@ -10,24 +10,28 @@
 </head>
 <body>
 	<!-- no im not ai, this is just to tell me where to delete !-->
-	<script>
-		document.querySelector(".banner__close").addEventListener("click", function () {
-  this.closest(".banner").style.display = "none";
-});
-	</script>
-	
-	<div class="banner">
-    <div class="banner__content">
-      <div class="banner__text">
-        <strong>NOTE:</strong> this website may be getting a massive redesign, do note a lot of blog posts may stay the same or not change
-      </div>
-      <button class="banner__close" type="button">
-        <span class="material-icons">
-          close
-        </span>
-      </button>
-    </div>
-  </div>
+	<div class="top-banner">
+  <p>Free shipping on all orders! <a href="#">Learn More</a></p>
+	</div>
+
+	<style>
+		body { margin: 0; }
+.top-banner {
+  background-color: #009579;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+body { padding-top: 40px; } 
+
+	</style>
 	<!-- ok future me you can delete everything above !-->
     <header>
         <nav>
