@@ -5,13 +5,16 @@
         <style>
 
 html {
-    background-color: #18181b;
+    background-color: white;
 }
             
-iframe {
-    margin: 0 auto;
-    background-color: #777;
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Centers the iframe horizontally */
+  align-items: center;     /* Optional: Centers the iframe vertically if container has height */
+  width: 100%;
 }
+
 
             
 .roboto-<uniquifier> {
@@ -32,18 +35,20 @@ iframe {
     </head>
     <body>
         <h1>Declan Live - Twitch</h1>
-
+        <div class="iframe-container">
         <iframe
             src="https://player.twitch.tv/?channel=kleinarbys&parent=declan459.github.io"
             height="480"
             width="720"
             allowfullscreen>
         </iframe>
-
+        </div>
+        <div class="iframe-container">
         <iframe 
             src="https://www.twitch.tv/embed/kleinarbys/chat?parent=declan459.github.io"
             height="480"
             width="350">
         </iframe>
+        </div>
     </body>
 </html>
